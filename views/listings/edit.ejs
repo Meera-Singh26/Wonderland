@@ -8,12 +8,13 @@
          <label for="title" class="form-label">Title</label>
         <input name="listing[title]" 
         value="<%= listing.title %>" type="text" 
-        class="form-control"/>
+        class="form-control"
+        required/>
       </div>
       
       <div class="mb-3">
         <label for="description" class="form-label">Description</label>
-        <textarea name="listing[description]" class="form-control">
+        <textarea name="listing[description]" class="form-control" required>
        <%= listing.description %> </textarea>
       </div>
       
@@ -21,7 +22,9 @@
      <label for="image" class="form-label">Image Url</label>
       <input name="listing[image]" 
       value="<%= listing.image %>" type="text "
-       class="form-control"/>
+       class="form-control" 
+       required
+       />
      </div>
       
       <div class="row">
@@ -31,7 +34,9 @@
         <input name="listing[price]"
          placeholder="enter price"
           type="number"
-          class="form-control" />
+          class="form-control"
+          required 
+          />
       </div>
       
       <div class="mb-3 col-md-8">
@@ -39,10 +44,12 @@
         <input name="listing[country]"
          placeholder="enter country" 
          type="text"
-        class="form-control" />
+        class="form-control" 
+        required/>
+        <div class="invalid-feedback">Please enter a location.</div>
       </div>
 
-      </div>
+      
 
       <div class="mb-3">
         <label for="location" class="form-label">Location</label>
@@ -51,10 +58,13 @@
         value="<%= listing.location %>"
         type="text"
          class="form-control"
+         required
       />
+      <div class="invalid-feedback">Please enter a location.</div>
       </div>
       <br /><br />
       <button class="btn btn-dark edit-btn mt-3">Edit</button>
     </form>
   </div>
   </div>
+  
